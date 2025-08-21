@@ -10,7 +10,7 @@ import org.springframework.web.service.annotation.HttpExchange;
 import org.springframework.web.service.annotation.PostExchange;
 
 /**
- * @author Hussain Rana  Created on  8/20/2025 at 3:57 PM
+ * @author Hussain Rana
  */
 @HttpExchange(url = "api/v1/employee", accept = "application/json", contentType = "application/json")
 public interface EmployeeRestApiService {
