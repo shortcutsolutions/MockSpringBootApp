@@ -1,0 +1,22 @@
+spring.application.name: employee-api
+server.port: 8111
+logging.level.com.reliaquest.api: DEBUG
+employee:
+  server:
+    url: http://localhost:8112
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      employeeApiBreaker:
+        # Use COUNT_BASED sliding window
+        sliding-window-type: COUNT_BASED
+        sliding-window-size: 2   # look at last 2 calls
+        minimum-number-of-calls: 2
+        failure-rate-threshold: 100  # 100% of calls must fail
+        wait-duration-in-open-state: 30s
+        permitted-number-of-calls-in-half-open-state: 1
+        automatic-transition-from-open-to-half-open-enabled: true
+        record-exceptions:
+          - org.springframework.web.client.HttpClientErrorException
+        ignore-exceptions: []
