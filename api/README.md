@@ -1,10 +1,5 @@
-# Implement this API
+APi Implementation
 
-#### In this assessment you will be tasked with filling out the functionality of different methods that will be listed further down.
-
-These methods will require some level of API interactions with Mock Employee API at http://localhost:8112/api/v1/employee.
-
-Please keep the following in mind when doing this assessment:
 * clean coding practices
 * test driven development
 * logging
@@ -12,7 +7,7 @@ Please keep the following in mind when doing this assessment:
 
 ### Endpoints to implement
 
-_See `com.reliaquest.api.controller.IEmployeeController` for details._
+
 
 getAllEmployees()
 
@@ -52,6 +47,3 @@ deleteEmployeeById(...)
     path input - employee ID
     output - name of the employee
     description - this should delete the employee with specified id given, otherwise error
-
-### Testing
-Please include proper integration and/or unit tests.
